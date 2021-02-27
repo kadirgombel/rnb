@@ -15,11 +15,16 @@ import {
   Text,
 } from 'react-native';
 
+import Config from 'react-native-config';
+
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import {Container, Header, Content, Icon} from 'native-base';
+import UserCard from './components/UserCard';
 
 const App: () => React$Node = () => {
+  console.log(Config.API_URL);
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -39,6 +44,7 @@ const App: () => React$Node = () => {
                 style={{fontSize: 20, color: 'red'}}
               />
               <Icon type="FontAwesome" name="home" />
+              <UserCard />
             </Content>
           </Container>
         </ScrollView>
