@@ -17,10 +17,12 @@ import {
   StatusBar,
   Text,
 } from 'react-native';
+import getTheme from './themes/components';
+import platform from './themes/variables/platform';
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
-import { Container, Header, Content, Icon } from 'native-base';
+import { Container, Header, Content, Icon, StyleProvider } from 'native-base';
 import UserCard from './components/UserCard';
 
 const App = () => {
@@ -34,26 +36,28 @@ const App = () => {
        * @see https://github.com/rt2zz/redux-persist/blob/master/docs/PersistGate.md
        */}
       <PersistGate loading={null} persistor={persistor}>
-        <>
-          <StatusBar barStyle="dark-content" />
-          <SafeAreaView>
-            <ScrollView
-              contentInsetAdjustmentBehavior="automatic"
-              style={styles.scrollView}>
-              <Container>
-                <Header>
-                  <Text> asd</Text>
-                </Header>
-                <Content>
-                  <Icon name="home" />
-                  <Icon ios="ios-menu" android="md-menu" />
-                  <Icon type="FontAwesome" name="home" />
-                  <UserCard />
-                </Content>
-              </Container>
-            </ScrollView>
-          </SafeAreaView>
-        </>
+        <StyleProvider style={getTheme(platform)}>
+          <>
+            <StatusBar barStyle="dark-content" />
+            <SafeAreaView>
+              <ScrollView
+                contentInsetAdjustmentBehavior="automatic"
+                style={styles.scrollView}>
+                <Container>
+                  <Header>
+                    <Text> asd</Text>
+                  </Header>
+                  <Content>
+                    <Icon name="home" />
+                    <Icon ios="ios-menu" android="md-menu" />
+                    <Icon type="FontAwesome" name="home" />
+                    <UserCard />
+                  </Content>
+                </Container>
+              </ScrollView>
+            </SafeAreaView>
+          </>
+        </StyleProvider>
       </PersistGate>
     </Provider>
   );
