@@ -1,6 +1,5 @@
 import React from 'react';
 import {fireEvent, render} from '../../utils/testUtils';
-// import {render} from '@testing-library/react-native';
 import UserCard from './UserCard';
 
 describe('UserCard', () => {
