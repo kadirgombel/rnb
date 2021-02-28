@@ -7,15 +7,15 @@ export const init = createAsyncThunk('startup/init', async () => {
 const startupSlice = createSlice({
   name: 'startup',
   initialState: {
-    loading: true,
+    loaded: false,
   },
   reducers: {},
   extraReducers: {
     [init.fulfilled]: (state, action) => {
-      state.loading = false;
+      state.loaded = true;
     },
     [init.rejected]: (state, action) => {
-      state.loading = false;
+      state.loaded = false;
     },
   },
 });

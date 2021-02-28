@@ -17,6 +17,7 @@ module.exports = {
           _translations: './src/translations',
           _store: './src/store',
           _utils: './src/utils',
+          _navigators: './src/navigators',
         },
       },
     ],

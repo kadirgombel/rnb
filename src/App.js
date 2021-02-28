@@ -16,6 +16,7 @@ import {
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
+import StackNavigator from '_navigators/StackNavigator';
 import { Container, Header, Content, Icon } from 'native-base';
 import UserCard from './components/UserCard';
 import AppProviders from './utils/appProviders';
@@ -23,26 +24,28 @@ import AppProviders from './utils/appProviders';
 const App = () => {
   return (
     <AppProviders>
-      <>
-        <StatusBar barStyle="dark-content" />
-        <SafeAreaView>
-          <ScrollView
-            contentInsetAdjustmentBehavior="automatic"
-            style={styles.scrollView}>
-            <Container>
-              <Header>
-                <Text> asd</Text>
-              </Header>
-              <Content>
-                <Icon name="home" />
-                <Icon ios="ios-menu" android="md-menu" />
-                <Icon type="FontAwesome" name="home" />
-                <UserCard />
-              </Content>
-            </Container>
-          </ScrollView>
-        </SafeAreaView>
-      </>
+      <StackNavigator>
+        <>
+          <StatusBar barStyle="dark-content" />
+          <SafeAreaView>
+            <ScrollView
+              contentInsetAdjustmentBehavior="automatic"
+              style={styles.scrollView}>
+              <Container>
+                <Header>
+                  <Text> asd</Text>
+                </Header>
+                <Content>
+                  <Icon name="home" />
+                  <Icon ios="ios-menu" android="md-menu" />
+                  <Icon type="FontAwesome" name="home" />
+                  <UserCard />
+                </Content>
+              </Container>
+            </ScrollView>
+          </SafeAreaView>
+        </>
+      </StackNavigator>
     </AppProviders>
   );
 };
