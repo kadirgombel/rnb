@@ -1,4 +1,8 @@
 module.exports = {
   root: true,
-  extends: ['@react-native-community'],
+  env: {
+    'jest/globals': true,
+  },
+  plugins: ['testing-library'],
+  extends: ['@react-native-community', 'plugin:testing-library/react'],
 };

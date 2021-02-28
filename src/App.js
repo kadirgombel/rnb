@@ -5,7 +5,7 @@
  * @format
  * @flow strict-local
  */
-import './translations';
+import '_translations';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/lib/integration/react';
@@ -18,16 +18,12 @@ import {
   Text,
 } from 'react-native';
 
-import Config from 'react-native-config';
-
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import {Container, Header, Content, Icon} from 'native-base';
 import UserCard from './components/UserCard';
 
 const App = () => {
-  console.log(Config.API_URL);
-
   return (
     <Provider store={store}>
       {/**

@@ -1,12 +1,14 @@
 import React, {useEffect, useCallback, useState} from 'react';
-import {View, Text} from 'react-native';
+
 import {init} from '_store/startup';
 import {userService} from '_services';
 import {useDispatch} from 'react-redux';
 import {useTranslation} from 'react-i18next';
+import {Button, Text, View} from 'native-base';
 
 export default function UserCard() {
   const [user, setUser] = useState({});
+  const [testLabelValue, setTestLabelValue] = useState('Default');
 
   const dispatch = useDispatch();
   const {t} = useTranslation();
@@ -24,6 +26,10 @@ export default function UserCard() {
   return (
     <View>
       <Text>{JSON.stringify(user, null, 2)}</Text>
+      <Text>{testLabelValue}</Text>
+      <Button onPress={() => setTestLabelValue('After Test')}>
+        <Text>Get Data</Text>
+      </Button>
     </View>
   );
 }

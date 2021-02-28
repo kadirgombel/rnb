@@ -9,7 +9,9 @@
       "_services": "./src/services",
       "_themes": "./src/themes",
       "_translations": "./src/translations",
-      "_store": "./src/store"
+      "_store": "./src/store",
+      "_utils": "./src/utils"
     }
-  }
+  },
+  "typeAcquisition": {"include": ["jest"]}
 }
