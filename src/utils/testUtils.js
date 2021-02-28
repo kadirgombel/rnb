@@ -1,12 +1,12 @@
 import React from 'react';
 import '_translations';
-import {Provider} from 'react-redux';
-import {render} from '@testing-library/react-native';
-import {PersistGate} from 'redux-persist/lib/integration/react';
-import {store, persistor} from '_store';
-import {SafeAreaView, ScrollView} from 'react-native';
+import { Provider } from 'react-redux';
+import { render } from '@testing-library/react-native';
+import { PersistGate } from 'redux-persist/lib/integration/react';
+import { store, persistor } from '_store';
+import { SafeAreaView, ScrollView } from 'react-native';
 
-const AllTheProviders = ({children}) => {
+const AllTheProviders = ({ children }) => {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
@@ -24,7 +24,7 @@ const wait = async (ms) =>
   await new Promise((resolve) => setTimeout(resolve, ms));
 
 const customRender = async (ui, options) => {
-  const result = render(ui, {wrapper: AllTheProviders, ...options});
+  const result = render(ui, { wrapper: AllTheProviders, ...options });
   // To wait redux-persist gate
   await wait(1);
   return result;
@@ -34,4 +34,4 @@ const customRender = async (ui, options) => {
 export * from '@testing-library/react-native';
 
 // override render method
-export {customRender as render};
+export { customRender as render };

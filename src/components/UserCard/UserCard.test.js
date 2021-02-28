@@ -1,10 +1,10 @@
 import React from 'react';
-import {fireEvent, render} from '../../utils/testUtils';
+import { fireEvent, render } from '../../utils/testUtils';
 import UserCard from './UserCard';
 
 describe('UserCard', () => {
   it('changes text when pressed button', async () => {
-    const {getByText} = render(<UserCard />);
+    const { getByText } = render(<UserCard />);
 
     expect(getByText('Default')).toBeTruthy();
     const button = getByText('Get Data');

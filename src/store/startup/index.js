@@ -1,4 +1,4 @@
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const init = createAsyncThunk('startup/init', async () => {
   await new Promise((resolve) => setTimeout(resolve, 1000));

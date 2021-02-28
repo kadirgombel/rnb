@@ -7,9 +7,9 @@
  */
 import '_translations';
 import React from 'react';
-import {Provider} from 'react-redux';
-import {PersistGate} from 'redux-persist/lib/integration/react';
-import {store, persistor} from '_store';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/lib/integration/react';
+import { store, persistor } from '_store';
 import {
   SafeAreaView,
   StyleSheet,
@@ -18,9 +18,9 @@ import {
   Text,
 } from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
-import {Container, Header, Content, Icon} from 'native-base';
+import { Container, Header, Content, Icon } from 'native-base';
 import UserCard from './components/UserCard';
 
 const App = () => {
