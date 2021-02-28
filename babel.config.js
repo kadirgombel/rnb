@@ -5,15 +5,17 @@ module.exports = {
       'module-resolver',
       {
         root: ['./src'],
+        extensions: ['.js', '.json'],
         // Add your new aliases here
         alias: {
-          components: './components',
-          assets: './assets',
-          hooks: './hooks',
-          pages: './pages',
+          _components: './src/components',
+          _assets: './src/assets',
+          _hooks: './src/hooks',
+          _pages: './src/pages',
           _services: './src/services',
-          themes: './themes',
-          translations: './translations',
+          _themes: './src/themes',
+          _translations: './src/translations',
+          _store: './src/store',
         },
       },
     ],

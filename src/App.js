@@ -5,8 +5,11 @@
  * @format
  * @flow strict-local
  */
-
+import './translations';
 import React from 'react';
+import {Provider} from 'react-redux';
+import {PersistGate} from 'redux-persist/lib/integration/react';
+import {store, persistor} from '_store';
 import {
   SafeAreaView,
   StyleSheet,
@@ -22,34 +25,41 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {Container, Header, Content, Icon} from 'native-base';
 import UserCard from './components/UserCard';
 
-const App: () => React$Node = () => {
+const App = () => {
   console.log(Config.API_URL);
 
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Container>
-            <Header>
-              <Text> asd</Text>
-            </Header>
-            <Content>
-              <Icon name="home" />
-              <Icon
-                ios="ios-menu"
-                android="md-menu"
-                style={{fontSize: 20, color: 'red'}}
-              />
-              <Icon type="FontAwesome" name="home" />
-              <UserCard />
-            </Content>
-          </Container>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <Provider store={store}>
+      {/**
+       * PersistGate delays the rendering of the app's UI until the persisted state has been retrieved
+       * and saved to redux.
+       * The `loading` prop can be `null` or any react instance to show during loading (e.g. a splash screen),
+       * for example `loading={<SplashScreen />}`.
+       * @see https://github.com/rt2zz/redux-persist/blob/master/docs/PersistGate.md
+       */}
+      <PersistGate loading={null} persistor={persistor}>
+        <>
+          <StatusBar barStyle="dark-content" />
+          <SafeAreaView>
+            <ScrollView
+              contentInsetAdjustmentBehavior="automatic"
+              style={styles.scrollView}>
+              <Container>
+                <Header>
+                  <Text> asd</Text>
+                </Header>
+                <Content>
+                  <Icon name="home" />
+                  <Icon ios="ios-menu" android="md-menu" />
+                  <Icon type="FontAwesome" name="home" />
+                  <UserCard />
+                </Content>
+              </Container>
+            </ScrollView>
+          </SafeAreaView>
+        </>
+      </PersistGate>
+    </Provider>
   );
 };
 

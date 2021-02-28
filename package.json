@@ -12,11 +12,19 @@
     "prettify": "prettier --write ./src/**/*.js"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.14.1",
+    "@reduxjs/toolkit": "^1.5.0",
     "axios": "^0.21.1",
+    "i18next": "^19.9.0",
     "native-base": "^2.15.2",
     "react": "16.13.1",
+    "react-hook-form": "^6.15.4",
+    "react-i18next": "^11.8.8",
     "react-native": "0.63.4",
-    "react-native-config": "^1.4.2"
+    "react-native-config": "^1.4.2",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
