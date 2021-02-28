@@ -27,7 +27,7 @@ export default function UserCard() {
     <View>
       <Text>{JSON.stringify(user, null, 2)}</Text>
       <Text>{testLabelValue}</Text>
-      <Button disabled onPress={() => setTestLabelValue('After Test')}>
+      <Button onPress={() => setTestLabelValue('After Test')}>
         <Text>Get Data</Text>
       </Button>
     </View>

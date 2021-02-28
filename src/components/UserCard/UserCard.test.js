@@ -4,7 +4,7 @@ import UserCard from './UserCard';
 
 describe('UserCard', () => {
   it('changes text when pressed button', async () => {
-    const { getByText } = render(<UserCard />);
+    const { getByText } = await render(<UserCard />);
 
     expect(getByText('Default')).toBeTruthy();
     const button = getByText('Get Data');

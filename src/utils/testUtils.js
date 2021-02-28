@@ -1,20 +1,25 @@
 import React from 'react';
 import '_translations';
+import getTheme from '_themes/components';
+import platform from '_themes/variables/platform';
 import { Provider } from 'react-redux';
 import { render } from '@testing-library/react-native';
 import { PersistGate } from 'redux-persist/lib/integration/react';
 import { store, persistor } from '_store';
 import { SafeAreaView, ScrollView } from 'react-native';
+import { StyleProvider } from 'native-base';
 
 const AllTheProviders = ({ children }) => {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <SafeAreaView>
-          <ScrollView contentInsetAdjustmentBehavior="automatic">
-            {children}
-          </ScrollView>
-        </SafeAreaView>
+        <StyleProvider style={getTheme(platform)}>
+          <SafeAreaView>
+            <ScrollView contentInsetAdjustmentBehavior="automatic">
+              {children}
+            </ScrollView>
+          </SafeAreaView>
+        </StyleProvider>
       </PersistGate>
     </Provider>
   );

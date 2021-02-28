@@ -5,6 +5,7 @@
  * @format
  * @flow strict-local
  */
+import 'react-native-gesture-handler';
 import '_translations';
 import React from 'react';
 import { Provider } from 'react-redux';
@@ -17,8 +18,8 @@ import {
   StatusBar,
   Text,
 } from 'react-native';
-import getTheme from './themes/components';
-import platform from './themes/variables/platform';
+import getTheme from '_themes/components';
+import platform from '_themes/variables/platform';
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
