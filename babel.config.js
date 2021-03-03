@@ -18,6 +18,7 @@ module.exports = {
           _store: './src/store',
           _utils: './src/utils',
           _navigators: './src/navigators',
+          _mocks: './src/mocks',
         },
       },
     ],

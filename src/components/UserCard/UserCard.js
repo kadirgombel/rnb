@@ -1,31 +1,26 @@
-import React, { useEffect, useCallback, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { init } from '_store/startup';
 import { userService } from '_services';
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { Button, Text, View } from 'native-base';
+import { useQuery } from 'react-query';
 
 export default function UserCard() {
-  const [user, setUser] = useState({});
   const [testLabelValue, setTestLabelValue] = useState('Default');
 
   const dispatch = useDispatch();
   const { t } = useTranslation();
+  const { data } = useQuery('user', () => userService.getUserInfo(2));
 
-  const getUser = useCallback(async () => {
-    const { data } = await userService.getUserInfo(2);
-    setUser(data);
+  useEffect(() => {
     dispatch(init());
     console.log(t('welcome'));
   }, [dispatch, t]);
-
-  useEffect(() => {
-    getUser();
-  }, [getUser]);
   return (
     <View>
-      <Text>{JSON.stringify(user, null, 2)}</Text>
+      <Text>{JSON.stringify(data?.data, null, 2)}</Text>
       <Text>{testLabelValue}</Text>
       <Button onPress={() => setTestLabelValue('After Test')}>
         <Text>Get Data</Text>

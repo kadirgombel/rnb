@@ -8,6 +8,9 @@ import { store, persistor } from '_store';
 import getTheme from '_themes/components';
 import platform from '_themes/variables/platform';
 import { StyleProvider } from 'native-base';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
 
 export default function AppProviders({ children }) {
   return (
@@ -20,7 +23,11 @@ export default function AppProviders({ children }) {
        * @see https://github.com/rt2zz/redux-persist/blob/master/docs/PersistGate.md
        */}
       <PersistGate loading={null} persistor={persistor}>
-        <StyleProvider style={getTheme(platform)}>{children}</StyleProvider>
+        <StyleProvider style={getTheme(platform)}>
+          <QueryClientProvider client={queryClient}>
+            {children}
+          </QueryClientProvider>
+        </StyleProvider>
       </PersistGate>
     </Provider>
   );
