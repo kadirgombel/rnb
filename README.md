@@ -1,6 +1,7 @@
 # rnb - React Native Boilerplate
 
 [![GitHub version](https://img.shields.io/badge/version-v1.0.0-blue.svg)](https://github.com/kadirgombel/rnb)
+[![Depfu](https://badges.depfu.com/badges/279833236bb2e3daef40b69efd78ea4c/count.svg)](https://depfu.com/github/kadirgombel/rnb?project_id=22898)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg?style=flat-square)](http://makeapullrequest.com)
 
