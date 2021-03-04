@@ -40,3 +40,10 @@ jest.mock('redux-persist', () => {
 jest.mock('redux-persist/integration/react', () => ({
   PersistGate: (props) => props.children,
 }));
+
+// reset react-query
+import { queryClient } from '_utils/queryClient';
+afterAll(() => {
+  queryClient.removeQueries();
+  queryClient.unmount();
+});

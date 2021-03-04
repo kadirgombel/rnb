@@ -6,10 +6,10 @@ import AppProviders from './appProviders';
 const wait = async (ms) =>
   await new Promise((resolve) => setTimeout(resolve, ms));
 
-const customRender = async (ui, options) => {
+const customRender = (ui, options) => {
   const result = render(ui, { wrapper: AppProviders, ...options });
   // To wait redux-persist gate
-  await wait(1);
+  // await wait(1);
   return result;
 };
 

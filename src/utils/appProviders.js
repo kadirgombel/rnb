@@ -8,9 +8,8 @@ import { store, persistor } from '_store';
 import getTheme from '_themes/components';
 import platform from '_themes/variables/platform';
 import { StyleProvider } from 'native-base';
-import { QueryClient, QueryClientProvider } from 'react-query';
-
-const queryClient = new QueryClient();
+import { QueryClientProvider } from 'react-query';
+import { queryClient } from '_utils/queryClient';
 
 export default function AppProviders({ children }) {
   return (
