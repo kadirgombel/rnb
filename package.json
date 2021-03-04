@@ -7,7 +7,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "start:reset": "react-native start --reset-cache",
-    "test": "jest --runInBand",
+    "test": "jest",
     "lint": "eslint .",
     "link": "react-native link",
     "prettify": "prettier --write ./src/**/*.js"

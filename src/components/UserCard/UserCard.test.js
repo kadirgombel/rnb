@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render } from '../../utils/testUtils';
+import { fireEvent, render } from '_utils/testUtils';
 import UserCard from './UserCard';
 import { server } from '_mocks/server';
 import { successOneUser } from '_mocks/services/userService';
