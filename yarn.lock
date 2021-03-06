@@ -657,7 +657,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.12.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.7.2":
+"@babel/runtime@^7.12.5", "@babel/runtime@^7.13.9", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.7.2":
   version "7.13.9"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.9.tgz#97dbe2116e2630c489f22e0656decd60aaa1fcee"
   integrity sha512-aY2kU+xgJ3dJ1eU6FMB9EH8dIe8dmusF1xEku52joLvw6eAFN0AI+WxCLDnpev2LEejWBAy2sBvBOBAjI3zmvA==
@@ -1241,10 +1241,10 @@
     ramda "^0.26.1"
     redent "^2.0.0"
 
-"@testing-library/react-native@^7.1.0":
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/react-native/-/react-native-7.1.0.tgz#6b168aac21522c8a5175461b350336fd79612ac9"
-  integrity sha512-ljVM9KZqG7BT/NFN6CHzdF6MNmM28+k7MEybFJ7FW1wVrhpiY4+hU9ypZ+hboO+MG3KpE2aFBzP4od3gu+Zzdg==
+"@testing-library/react-native@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/react-native/-/react-native-7.2.0.tgz#e5ec5b0974e4e5f525f8057563417d1e9f820d96"
+  integrity sha512-rDKzJjAAeGgyoJT0gFQiMsIL09chdWcwZyYx6WZHMgm2c5NDqY52hUuyTkzhqddMYWmSRklFphSg7B2HX+246Q==
   dependencies:
     pretty-format "^26.0.1"
 
@@ -3876,10 +3876,10 @@ husky@4.3.7:
     slash "^3.0.0"
     which-pm-runs "^1.0.0"
 
-i18next@^19.9.0:
-  version "19.9.0"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-19.9.0.tgz#0a8cdacac4c8fb384f81f1cfcce823772b37e5d3"
-  integrity sha512-5zRG3aFl+e+LsdpVUp0dKkVhYH2iCv+gxyzXP1q2oJUc3BV26fqX87cBE3AHkMOir1X0liOaSoxS/Kg95iEcEQ==
+i18next@^19.9.1:
+  version "19.9.1"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-19.9.1.tgz#7a072b75daf677aa51fd4ce55214f21702af3ffd"
+  integrity sha512-9Azzyb3DvMJUMd7sPhwVEs6PQcogvdHmLQTjMQ+P+h3XwW4O66/8lgZTmYShgkjPOCqTw4Fwl5LOp/VhZgPo5A==
   dependencies:
     "@babel/runtime" "^7.12.0"
 
@@ -6482,10 +6482,10 @@ react-native-safe-area-context@^3.1.9:
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.1.9.tgz#48864ea976b0fa57142a2cc523e1fd3314e7247e"
   integrity sha512-wmcGbdyE/vBSL5IjDPReoJUEqxkZsywZw5gPwsVUV1NBpw5eTIdnL6Y0uNKHE25Z661moxPHQz6kwAkYQyorxA==
 
-react-native-screens@^2.18.0:
-  version "2.18.0"
-  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-2.18.0.tgz#8652f8e77fdfd38ffb355eab32a22644e956745c"
-  integrity sha512-8+lCEsxzSu55GWRw6yZpyt3OszxN1OngfBsFXdqspaEfq6uIChanzlcD2PLVQl+iN82GAcrZM800Kd1pA477ZQ==
+react-native-screens@^2.18.1:
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-2.18.1.tgz#47b9991c6f762d00d0ed3233e5283d523e859885"
+  integrity sha512-r5WZLpmx2hHjC1RgMdPq5YpSU9tEhBpUaZ5M1SUtNIONyiLqQVxabhRCINdebIk4depJiIl7yw2Q85zJyeX6fw==
 
 react-native-vector-icons@^7.0.0:
   version "7.1.0"
