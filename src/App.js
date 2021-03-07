@@ -6,87 +6,22 @@
  * @flow strict-local
  */
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  StatusBar,
-  Text,
-} from 'react-native';
-
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+// import { StyleSheet } from 'react-native';
 
 import StackNavigator from '_navigators/StackNavigator';
-import { Container, Header, Content, Icon } from 'native-base';
-import UserCard from './components/UserCard';
 import AppProviders from './utils/appProviders';
 
 const App = () => {
   return (
     <AppProviders>
-      <StackNavigator>
-        <>
-          <StatusBar barStyle="dark-content" />
-          <SafeAreaView>
-            <ScrollView
-              contentInsetAdjustmentBehavior="automatic"
-              style={styles.scrollView}>
-              <Container>
-                <Header>
-                  <Text> asd</Text>
-                </Header>
-                <Content>
-                  <Icon name="home" />
-                  <Icon ios="ios-menu" android="md-menu" />
-                  <Icon type="FontAwesome" name="home" />
-                  <UserCard />
-                </Content>
-              </Container>
-            </ScrollView>
-          </SafeAreaView>
-        </>
-      </StackNavigator>
+      <SafeAreaProvider>
+        <StackNavigator />
+      </SafeAreaProvider>
     </AppProviders>
   );
 };
 
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
+// const styles = StyleSheet.create({});
 
 export default App;
