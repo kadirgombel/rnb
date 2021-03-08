@@ -22,11 +22,9 @@ export default function AppProviders({ children }) {
        * @see https://github.com/rt2zz/redux-persist/blob/master/docs/PersistGate.md
        */}
       <PersistGate loading={null} persistor={persistor}>
-        <StyleProvider style={getTheme(platform)}>
-          <QueryClientProvider client={queryClient}>
-            {children}
-          </QueryClientProvider>
-        </StyleProvider>
+        <QueryClientProvider client={queryClient}>
+          <StyleProvider style={getTheme(platform)}>{children}</StyleProvider>
+        </QueryClientProvider>
       </PersistGate>
     </Provider>
   );

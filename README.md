@@ -84,13 +84,14 @@ react-native-boilerplate
 
 Some of the dependencies used in the project
 
+- [Native Base](https://github.com/GeekyAnts/NativeBase) - Essential cross-platform UI components for React Native
+- [React Navigation](https://github.com/react-navigation/react-navigation) - Routing and navigation for your React Native apps
 - [React Hook Form](https://github.com/react-hook-form/react-hook-form) - 📋 React Hooks for forms validation
+- [Yup](https://github.com/jquense/yup) - Dead simple Object schema validation
 - [Redux Toolkit](https://github.com/reduxjs/redux-toolkit) - The official, opinionated, batteries-included toolset for efficient Redux development
 - [Redux Persist](https://github.com/rt2zz/redux-persist) - Persist and rehydrate a redux store
 - [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
-- [Native Base](https://github.com/GeekyAnts/NativeBase) - Essential cross-platform UI components for React Native
 - [React Query](https://github.com/tannerlinsley/react-query) - ⚛️ Hooks for fetching, caching and updating asynchronous data in React
-- [React Navigation](https://github.com/react-navigation/react-navigation) - Routing and navigation for your React Native apps
 - [React-i18next](https://github.com/i18next/react-i18next) - Internationalization for react done right. Using the i18next i18n ecosystem.
 
 Dev dependencies

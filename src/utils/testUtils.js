@@ -3,15 +3,8 @@ import { render } from '@testing-library/react-native';
 
 import AppProviders from './appProviders';
 
-const wait = async (ms) =>
-  await new Promise((resolve) => setTimeout(resolve, ms));
-
-const customRender = (ui, options) => {
-  const result = render(ui, { wrapper: AppProviders, ...options });
-  // To wait redux-persist gate
-  // await wait(1);
-  return result;
-};
+const customRender = (ui, options) =>
+  render(ui, { wrapper: AppProviders, ...options });
 
 // re-export everything
 export * from '@testing-library/react-native';
