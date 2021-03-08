@@ -1,12 +1,17 @@
 export default {
   welcome: 'Welcome',
-  actions: {
-    continue: 'Continue',
+  home: 'Home',
+  settings: 'Settings',
+  getData: 'Get Data',
+  exampleForm: {
+    username: 'Username',
+    password: 'Password',
+    usernameRequired: 'Username is required',
+    passwordRequired: 'Password is required',
+    submit: 'Submit',
   },
-  example: {
-    helloUser: 'Hello user',
-    labels: {
-      userId: 'Enter a user id',
-    },
+  langPicker: {
+    turkish: 'Turkish',
+    english: 'English',
   },
 };
