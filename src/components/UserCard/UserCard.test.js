@@ -5,14 +5,15 @@ import { server } from '_mocks/server';
 import { successOneUser } from '_mocks/services/userService';
 
 describe('UserCard', () => {
-  it('changes text when pressed button', async () => {
+  it('should get data on button press', async () => {
     server.use(successOneUser);
-    const { getByText } = await render(<UserCard />);
+    const { getByText, findByText } = render(<UserCard />);
 
-    expect(getByText('Default')).toBeTruthy();
     const button = getByText('Get Data');
     fireEvent.press(button);
 
-    expect(getByText('After Test')).toBeTruthy();
+    expect(await findByText('Kadir')).toBeTruthy();
+    expect(await findByText('kadirgombel@gmail.com')).toBeTruthy();
+    expect(await findByText('111 111 11 11')).toBeTruthy();
   });
 });

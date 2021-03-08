@@ -7,9 +7,9 @@ export const successOneUser = rest.get(
     return res(
       ctx.status(200),
       ctx.json({
-        data: {
-          name: 'kadir',
-        },
+        name: 'Kadir',
+        email: 'kadirgombel@gmail.com',
+        phone: '111 111 11 11',
       }),
     );
   },
