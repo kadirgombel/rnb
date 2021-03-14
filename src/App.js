@@ -6,6 +6,7 @@
  * @flow strict-local
  */
 import React from 'react';
+
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 // import { StyleSheet } from 'react-native';
 

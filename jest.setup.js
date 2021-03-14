@@ -17,7 +17,8 @@ jest.mock('react-native-reanimated', () => {
 });
 
 // Silence the warning: Animated: `useNativeDriver` is not supported because the native animated module is missing
-jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+// TODO: mock this animated, it fails after upgrade to react native 0.64, react 17
+// jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 
 // Mock persist reducer, see https://github.com/rt2zz/redux-persist/issues/1243
 jest.mock('redux-persist', () => {
@@ -31,5 +32,5 @@ jest.mock('redux-persist', () => {
 });
 // see https://github.com/rt2zz/redux-persist/issues/822
 jest.mock('redux-persist/integration/react', () => ({
-  PersistGate: (props) => props.children,
+  PersistGate: props => props.children,
 }));

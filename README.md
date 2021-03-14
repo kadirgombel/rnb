@@ -82,8 +82,8 @@ react-native-boilerplate
 
 ## Dependencies
 
-- React Native **v0.63.4**
-- React **v16.13.1**
+- React Native **v0.64.0**
+- React **v17.0.1**
 
 Some of the dependencies used in the project
 
