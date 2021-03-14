@@ -82,6 +82,9 @@ react-native-boilerplate
 
 ## Dependencies
 
+- React Native **v0.64.0**
+- React **v17.0.1**
+
 Some of the dependencies used in the project
 
 - [Native Base](https://github.com/GeekyAnts/NativeBase) - Essential cross-platform UI components for React Native
