@@ -1,6 +1,7 @@
 {
   "preset": "react-native",
-  "setupFilesAfterEnv": ["./jest.setup.js"],
+  "setupFiles": ["./jest.setup.js"],
+  "setupFilesAfterEnv": ["./jest.setupAfterEnv.js"],
   "transformIgnorePatterns": ["/node_modules/(?!native-base)/"],
   "testPathIgnorePatterns": [".git/.*", "node_modules/.*"],
   "modulePaths": ["<rootDir>/src", "<rootDir>/node_modules"],
