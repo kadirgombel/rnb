@@ -11,7 +11,7 @@ import { init } from '_store/startup';
 const Stack = createStackNavigator();
 
 export default function StackNavigator() {
-  const isLoaded = useSelector((state) => state.startup.loaded);
+  const isLoaded = useSelector(state => state.startup.loaded);
 
   const dispatch = useDispatch();
 

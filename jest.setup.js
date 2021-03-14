@@ -38,7 +38,7 @@ jest.mock('redux-persist', () => {
 });
 // see https://github.com/rt2zz/redux-persist/issues/822
 jest.mock('redux-persist/integration/react', () => ({
-  PersistGate: (props) => props.children,
+  PersistGate: props => props.children,
 }));
 
 // reset react-query

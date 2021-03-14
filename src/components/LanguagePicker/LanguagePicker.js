@@ -20,8 +20,8 @@ export default function LanguagePicker() {
       mode="dropdown"
       style={styles.picker}
       selectedValue={i18n.language}
-      onValueChange={(value) => i18n.changeLanguage(value)}>
-      {langs.map((lang) => (
+      onValueChange={value => i18n.changeLanguage(value)}>
+      {langs.map(lang => (
         <Picker.Item key={lang.value} label={lang.label} value={lang.value} />
       ))}
     </Picker>

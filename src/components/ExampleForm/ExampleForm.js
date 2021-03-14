@@ -12,7 +12,7 @@ export default function ExampleForm() {
     resolver: yupResolver(SCHEMA),
   });
 
-  const handleLogin = (data) => {
+  const handleLogin = data => {
     console.log('Submitted data', data);
   };
 
@@ -26,7 +26,7 @@ export default function ExampleForm() {
           render={({ onChange, value }) => (
             <>
               <Input
-                onChangeText={(text) => onChange(text)}
+                onChangeText={text => onChange(text)}
                 value={value}
                 placeholder={t('exampleForm.username')}
               />
@@ -45,7 +45,7 @@ export default function ExampleForm() {
           render={({ onChange, value }) => (
             <>
               <Input
-                onChangeText={(text) => onChange(text)}
+                onChangeText={text => onChange(text)}
                 value={value}
                 placeholder={t('exampleForm.password')}
               />

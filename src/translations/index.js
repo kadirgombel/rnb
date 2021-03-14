@@ -4,7 +4,7 @@ import * as resources from './resources';
 
 const defaultLang = 'en';
 
-const mapTranslations = (translations) => ({
+const mapTranslations = translations => ({
   ...Object.entries(translations).reduce(
     (acc, [key, value]) => ({
       ...acc,
