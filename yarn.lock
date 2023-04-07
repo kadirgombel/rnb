@@ -1187,10 +1187,10 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/eslint-plugin/-/eslint-plugin-1.1.0.tgz#e42b1bef12d2415411519fd528e64b593b1363dc"
   integrity sha512-W/J0fNYVO01tioHjvYWQ9m6RgndVtbElzYozBq1ZPrHO/iCzlqoySHl4gO/fpCl9QEFjvJfjPgtPMTMlsoq5DQ==
 
-"@react-native-masked-view/masked-view@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@react-native-masked-view/masked-view/-/masked-view-0.2.2.tgz#6cde4d27c1ac02783be1f3f194da5d4bb15bbef2"
-  integrity sha512-89/tm7oMvNU4y4gUKdtyhqbl74b9ko67RCXLu0lL/BuEKOJ8rWnakx21E8GiZXr/x4VCvIQaz8iFT16hSMoNOQ==
+"@react-native-masked-view/masked-view@^0.2.9":
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/@react-native-masked-view/masked-view/-/masked-view-0.2.9.tgz#723a7a076d56b8f5f3fda076eaa5b6b82988e854"
+  integrity sha512-Hs4vKBKj+15VxHZHFtMaFWSBxXoOE5Ea8saoigWhahp8Mepssm0ezU+2pTl7DK9z8Y9s5uOl/aPb4QmBZ3R3Zw==
 
 "@react-native-picker/picker@^1.9.11", "@react-native-picker/picker@^1.9.7":
   version "1.9.11"
